@@ -3,6 +3,7 @@ void setup(){
   noLoop();
 }
 
+
 void draw(){
 
   // make frame behind alien
