@@ -58,7 +58,7 @@ void draw(){
   
 //Beregn Moms
   int total =58;
-  float belobMedMoms =beregeMom (total);
+  float belobMedMoms =beregnMom (total);
 
 
   textSize(20);
