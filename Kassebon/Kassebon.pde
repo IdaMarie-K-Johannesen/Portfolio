@@ -46,10 +46,9 @@ void draw(){
   int hour=hour();
   int minute=minute();
  
-  //text(day,"-",month,"-",year,hour,minute,200,500);
- 
+  String str = String.format(day+"-"+month+"-"+year+hour+minute);
+ text(str,10,10);
   
-  String str =(day(),"/",month(),year(), hour(),":",minute());
   
   
 }
