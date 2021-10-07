@@ -17,7 +17,6 @@ void draw(){
   
   
 //Åbnings tid
-  textSize(20);//!!!!!!!!!!!!!!Det er ikke nødvendigt at sætte størrelsen på din tekst igen når det er samme størrelse som oven over. Den bliver ved med at bruge samme tekst størrelse indtil du sætter den til noget andet!!!!!!!!!!!!!!
   text("HVER DAG ENDNU BEDRE",90,120);//Hun skriver hvad der skal stå som tekst og hvor det skal stå og det samme gør hun neden under
   text("Man-Søn: 08:00-21:00",105,140);
   
@@ -26,26 +25,32 @@ void draw(){
   text("Kundeservice: 70707417 eller aldi.dk",45,160);//I denne linje og linjen under skriver hun en tekst og fortæller hvor i canvas det skal skrives
   text("CVR NR.24247902",120,180);
   
+//linje
+    line(20,200,380,200);
+  
   
 //Køb af chips
     int antal1=1;//Her initiere en dekleration med en variable. Hun fortæller hvad antal1 skal være
     int pris1 = 15;// her gør hun det samme som ovenover. hun fortæller hvad pris1 er
     text("chip",20,220);//her skriver hun tekst i canvas og hvor det skal skrives
+   
+//Den fuld pris af chip    
     int fuldpris1 =pris1*antal1;//Her initiere hun igen en dekleration med en variable som en funktion. hun regner den fulde pris ud ved at gange pris med antal
-    text(fuldpris1,320,220);//her skriver hun den fuldepris som hun lige har beregnet
+    text(fuldpris1,360,220);//her skriver hun den fuldepris som hun lige har beregnet
     
 //Køb af cola
     int antal2 = 2;//her gør hun det samme som oven over bare med en ny vare. Hun deklarere antal og pris af den nye vare og beregner den fulde pris af det og skriver det i canvas
     int pris2 = 15;
-    text("2 X cola",20,260);
+    text("2 X cola",20,250);
+   
+//Den fulde pris af cola 
     int fuldpris2 = pris2*antal2;
-    text(fuldpris2,320,260);
+    text(fuldpris2,360,250);
   
   
   
-  
-  
- 
+//striplet linje
+    text("- - - - - - - - - - - - - - - - - - - - - - - - - - ",20,260);  
   
   
 //Dato og kl.
@@ -56,31 +61,44 @@ void draw(){
   int minute=minute();
  
   String str = String.format(day+"-"+month+"-"+year+"         "+hour+":"+minute);//Hun initiere hendes deklarering (den orange del),med en integer, hun fortæller hvordan datoen skal skrives i canvas. 
- text(str,20,350);//Her indsætter hun sin Dato i canvas
-  
+  text(str,20,380);//Her indsætter hun sin Dato i canvas
   
 
- 
 
  //Kortbetaling
-   text("Kortbetaling",20,400);//her skriver hun og fortæller hvor det skal skrives
+   text("Kortbetaling",20,290);//her skriver hun og fortæller hvor det skal skrives
    int total = fuldpris1 + fuldpris2;//Her finder hun den fulde pris ved at lave en funktion hvor hun ganger prisen for de to vare sammen
-   text(total,320,400);//Her skriver hun det hun lige har beregnet
+   text(total,360,290);//Her skriver hun det hun lige har beregnet
 
   
 //Beregn Moms
- // int total =58;
-  //float belobMedMoms =beregnMom (total);
+    float UndenMoms = beregnUdenMoms(total);
+    text(UndenMoms,320,330);
+    text("Beløb uden moms",20,330);
+   
+    float Moms = beregnMoms(total);
+    text (Moms,330,310);
+    text("Moms",20,310);
 
+//linje  
+     line(20,350,380,350);
 
-  textSize(20);//!!!!!!!!!!!!!!!Her sætter du igen texten til det som den allerede er. Det behøver du ikke. den er allerede 20!!!!!!!!!!!!
- // float belobMedMoms = beregnMoms(belobUdenMoms);
-  //text (belobMedMoms,300,500);
+  
+ //Hilsen
+  textSize(25);
+  text("TAK FOR BESØGET - OG PÅ GENSYN",20,440);
+  
   
   
 }
 
 //Beregner moms
-float beregnMoms(int belob){//her bruger hun en float  og en initering til at beregne momsen
-  return belob*1.25;//Her beregner hun momsen med return og hendes beløb
+    float beregnMoms(int beløb ){//her bruger hun en float  og en initering til at beregne momsen
+    return beløb*0.2;//Her beregner hun momsen med return og hendes beløb
 }
+
+
+//Beregn uden moms
+    float beregnUdenMoms(int fuldbeløb){
+    return fuldbeløb*0.8;
+    }
