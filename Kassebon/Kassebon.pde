@@ -27,12 +27,25 @@ void draw(){
   text("CVR NR.24247902",120,180);
   
   
-//Køb
-    text("ZARANOFF VODKA 70CL",20,220);
-    text("58",320,220);
+//Køb af chips
+    int antal1=1;
+    int pris1 = 15;
+    text("chip",20,220);
+    int fuldpris1 =pris1*antal1;
+    text(fuldpris1,320,220);
+    
+//Køb af cola
+    int antal2 = 2;
+    int pris2 = 15;
+    text("2 X cola",20,260);
+    int fuldpris2 = pris2*antal2;
+    text(fuldpris2,320,260);
   
-    text("AT BETALE DKK",20,260);
-    text("58",320,260);
+  
+  
+  
+  
+ 
   
   
 //Dato og kl.
@@ -43,27 +56,26 @@ void draw(){
   int minute=minute();
  
   String str = String.format(day+"-"+month+"-"+year+"         "+hour+":"+minute);
- text(str,20,300);
+ text(str,20,350);
   
   
-//DKK
-  text("KØB  DKK      58",20,340);  
-  text("--------",180,370);
+
  
 
  //Kortbetaling
    text("Kortbetaling",20,400);
-   text("58",320,400);
+   int total = fuldpris1 + fuldpris2;
+   text(total,320,400);
 
   
 //Beregn Moms
-  int total =58;
-  float belobMedMoms =beregnMom (total);
+ // int total =58;
+  //float belobMedMoms =beregnMom (total);
 
 
   textSize(20);
-  float belobMedMoms = beregnMoms(belobUdenMoms);
-  text (belobMedMoms,300,500);
+ // float belobMedMoms = beregnMoms(belobUdenMoms);
+  //text (belobMedMoms,300,500);
   
   
 }
