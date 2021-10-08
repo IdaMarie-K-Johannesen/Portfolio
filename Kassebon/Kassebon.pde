@@ -32,7 +32,7 @@ void draw(){
 //Køb af chips
     int antal1=1;//Her initiere en dekleration med en variable. Hun fortæller hvad antal1 skal være
     int pris1 = 15;// her gør hun det samme som ovenover. hun fortæller hvad pris1 er
-    text("chip",20,220);//her skriver hun tekst i canvas og hvor det skal skrives
+    text("Chips",20,220);//her skriver hun tekst i canvas og hvor det skal skrives
    
 //Den fuld pris af chip    
     int fuldpris1 =pris1*antal1;//Her initiere hun igen en dekleration med en variable som en funktion. hun regner den fulde pris ud ved at gange pris med antal
@@ -41,7 +41,7 @@ void draw(){
 //Køb af cola
     int antal2 = 2;//her gør hun det samme som oven over bare med en ny vare. Hun deklarere antal og pris af den nye vare og beregner den fulde pris af det og skriver det i canvas
     int pris2 = 15;
-    text("2 X cola",20,250);
+    text("2 X Cola",20,250);
    
 //Den fulde pris af cola 
     int fuldpris2 = pris2*antal2;
