@@ -51,9 +51,9 @@ TESE
     c. Char: Max: 255 , min: 0
     d. Boolean: Max: 255, min: 0
     e. Byte: Max: 127, min: -128
-    f. Short: Max: 32,767, min: -32,768
-    g. long: Max:+(2^63)-1, min -2^63
-    h. Double. Max:(2^31)-1, min: -2^31
+    f. Short: Max: 30 min: -35
+    g. long: Max: 2^36, min -2^36
+    h. Double. Max: 2^31, min: -2^31
 
 Skriv et program, som kan beregne den maksimale værdi for en datatype. Vi kalder dette den induktive metode (specialtilfælde), fordi vi leder efter en special værdi (sort svane). Find evt. inspiration i programmet testDatatyper, som du finder på github. Noter alle dine resultater.
 
