@@ -60,12 +60,13 @@ Slå op i dokumentationen for processing og læs om string(). Nederst er der en 
 
 1) Lav henholdsvis en for-løkke og en while-løkken som udskriver de første 5. karakterer i sætningen "Hej med dig!". Tip, brug   
 charAt() sammen med din tæller i.
-*/
+
 
 String s ="Hej med dig!";
 boolean fundet = false;
 int i=0;
-
+*/
+/*
 //while
 while (!fundet) {
   if(s.charAt(i)=='m') {
@@ -85,6 +86,23 @@ for (int j=0; j<5;j++){
   println(s.charAt(j));
 }
 println();
+*/
+
+
+String s ="Hej med dig!";
+for(int i=0;i<s.length();i=i+1){
+  if(i<5){
+    print(s.charAt(i));{
+
+}
+
+int j=0;
+while(j<s.length()){
+  if(j<5){
+    print(s.charAt(j));
+  }}
+
+
 
 //2) Lav henholdsvis en for-løkke og en while-løkken som skal gennem løbes 30 gange. Start med i=0; og tæl i op hver gang du løber gennem løkken. Den skal kun udskrive i, når i er mellem værdien 10 til og med 20.
 /*
@@ -111,10 +129,10 @@ while (10<i>20) {
 }
 
 println();
+*/
 
-
-
-/*3) Lav henholdsvis en for-løkke og en while-løkken som skal finde alle e'er i sætningen: 
+/*
+3) Lav henholdsvis en for-løkke og en while-løkken som skal finde alle e'er i sætningen: 
 "Dette er en sætning som indeholder mange e'er. Men hvor mange er der?"
 Løkken skal udskrive alle e'er og tilsidst udskrive hvor mange e'er som er fundet.
 */
@@ -125,16 +143,13 @@ Løkken skal udskrive alle e'er og tilsidst udskrive hvor mange e'er som er fund
 //7) Lav et program som klipper i vores streng. Den skal tage fra position 83 og til 85. Udskriv den nye streng.
 //8) Lav hele sætningen om til store bogstaver og udskrive den.   
 //9) Lav hele sætningen om til små bogstaver og udskrive den.
-/*10) læs og forstå følgende program:
-
+//10) læs og forstå følgende program:
+/*
 String str2 =  "Nej";
 if (str2.equals("ja"))
   println ("Det gør den!");
  else
   println ("Det gør den ikke!");
- 
-a) hvad udskriver programmet?
-b) hvordan kan du få programmet til at udskrive det modsatte af, hvad den gør nu?
-
-Upload jeres løsning til Github
-*/
+ */
+//a) hvad udskriver programmet?
+//b) hvordan kan du få programmet til at udskrive det modsatte af, hvad den gør nu?
