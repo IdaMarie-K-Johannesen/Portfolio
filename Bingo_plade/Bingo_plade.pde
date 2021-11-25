@@ -5,6 +5,9 @@ for (1 til 9):
  temp 1
  1=0
  0=temp
+ 
+ ctrl+a
+ ctrl+t
  */
 
 int[]kolonne =new int [3];
