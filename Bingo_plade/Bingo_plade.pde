@@ -8,6 +8,10 @@ for (1 til 9):
  
  ctrl+a
  ctrl+t
+ 
+ tal[0][1]
+ 
+ 
  */
 
 int[]kolonne =new int [3];
