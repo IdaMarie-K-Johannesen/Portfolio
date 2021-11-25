@@ -46,7 +46,10 @@ int [] sorter(int[] tal) {
     tal[i+1]=tal [i];
     tal[i]=temp;
     i=0;
+  } else {
+    i++;
   }
 
   return tal;
+  
 }
