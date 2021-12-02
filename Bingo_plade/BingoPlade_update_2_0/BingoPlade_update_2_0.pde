@@ -6,7 +6,6 @@ int[] kolonne = new int[3];
 // 2D Array som svarer til vores bingo plade. 9 kolonner og 3 rækker
 int[][] bingoPlade = new int[9][3];
 
-
 void setup() {
   size (600, 600);
   textSize(20);
@@ -15,7 +14,6 @@ void setup() {
 
   // ****Lav en lykke som kan gentages 9 gange. Her starter din løkke
 
-
   // start med at finde tre tal
   for (int i =0; i < bingoPlade.length; i ++) {
     kolonne = findTreTal(i);
@@ -23,20 +21,19 @@ void setup() {
       kolonne = findTreTal(i);
     }
 
-
     // sorter kolonne stigende
     kolonne = sorter(kolonne);
 
     // **** put kolonne i bingPlade[i] det gør du her
     bingoPlade[i] = kolonne;
 
-    // her slutter din løkke
+    // her slutter løkke
   }
-
+  //"blanke" felter i bingo pladen
   int []nuller = new int[4];
   for (int i =0; i<3; i++) {
-     nuller =findFireTal();
-     
+    nuller =findFireTal();
+
     while (findEns(nuller)) {
       nuller =findFireTal();
       nuller = sorter (nuller);
@@ -57,7 +54,7 @@ void draw() {
   background(0, 0, 0);
   udskriv();
 }
-
+// har finder jeg tre randomtal
 int[] findTreTal(int faktor) {
   int[] tal = new int[3];
   for (int i=0; i < 3; i++) {
@@ -66,7 +63,7 @@ int[] findTreTal(int faktor) {
   }
   return tal;
 }
-
+// her laver jeg fire "blanke" felter
 int[] findFireTal() {
   int[] tal = new int[4];
   for (int i=0; i < tal.length; i++) {
@@ -74,7 +71,7 @@ int[] findFireTal() {
   }
   return tal;
 }
-
+// her sorter jeg talende efter størelse
 int[] sorter(int[] tal) {
   int i=0;
   //for (int i =0; i <tal.length-1; i++) {
@@ -90,7 +87,7 @@ int[] sorter(int[] tal) {
   }
   return tal;
 }
-
+// her sørger jeg for at der ikke er ens tal
 boolean findEns(int[] tal) {
   boolean notAlike = false;
   // find og ret dubletter
@@ -104,9 +101,7 @@ boolean findEns(int[] tal) {
   return notAlike;
 }
 
-
-
-
+// her udskriver jeg bingo pladen
 void udskriv() {
 
   // udskriv bingoPlade
