@@ -1,14 +1,39 @@
 class Trekant {
   // klassens attributter/ tilstand
   float x, y;
+  int r, g, b;
+  int len;
 
   //konstroktøren
   Trekant() {
+    generate();
+    generateColor();
+    generateLen();
   }
 
-  // tegn firkant på canvas
+  void generate() {
+    this.x = random(width);
+    this.y = random(height);
+  }
+
+  void generateColor() {
+    this.r = (int) random(256);
+    this.g = (int) random(256);
+    this.b = (int) random(256);
+  }
+
+  void generateLen() {
+    len = (int) random (100);
+  }
+
+
+  // tegn trekant på canvas
   void drawTrekant() {
-    triangle(x = random(600), y = random(400), x = random(600), y = random(400), x = random(600), y = random(400));
-    fill(random(255), random(255), random(255));
+    push();
+    translate(x, y);
+    rotate(frameCount);
+    triangle(0, 0, len, 0, 0, len);
+    pop();
+    fill(r, g, b);
   }
 }
