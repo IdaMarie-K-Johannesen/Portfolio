@@ -48,7 +48,7 @@ void draw() {
   c = new Cirkel();
   r = new Rektangel();
   t = new Trekant();
-  // tegnerobjekterne på canvas
+  // tegner objekterne på canvas
   f.drawFirkant();
   c.drawCirkel();
   r.drawRektangel();
