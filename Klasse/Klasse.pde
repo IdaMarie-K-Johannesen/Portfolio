@@ -43,12 +43,12 @@ void setup() {
 }
 
 void draw() {
-  // initiering af objektet f
+  // initiering af objektet f, c, r, t
   f = new Firkant();
   c = new Cirkel();
   r = new Rektangel();
   t = new Trekant();
-  // tegner firkanten på canvas
+  // tegnerobjekterne på canvas
   f.drawFirkant();
   c.drawCirkel();
   r.drawRektangel();

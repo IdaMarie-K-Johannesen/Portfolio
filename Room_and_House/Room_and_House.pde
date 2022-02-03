@@ -55,7 +55,7 @@ class Room {
   void drawRoof(){
   // tegn taget
   fill(50);
-  triangle(50, 290, 250, 150, 450, 290);
+  triangle(70, 290, 260, 170, 450, 290);
   // rydder op
   fill(205);
   
