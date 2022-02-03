@@ -29,11 +29,11 @@ class Trekant {
 
   // tegn trekant på canvas
   void drawTrekant() {
+    fill(r, g, b);
     push();
     translate(x, y);
     rotate(frameCount);
     triangle(0, 0, len, 0, 0, len);
     pop();
-    fill(r, g, b);
   }
 }

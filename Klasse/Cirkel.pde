@@ -29,7 +29,7 @@ class Cirkel {
 
   // tegn cirkel på canvas
   void drawCirkel() {
-    circle(x, y, len);
     fill(r, g, b);
+    circle(x, y, len);
   }
 }

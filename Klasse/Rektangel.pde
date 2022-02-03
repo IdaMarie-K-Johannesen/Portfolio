@@ -29,7 +29,7 @@ class Rektangel {
 
   // tegn rektangel på canvas
   void drawRektangel() {
-    rect(x, y, x, y);
     fill(r, g, b);
+    rect(x, y, x, y);
   }
 }

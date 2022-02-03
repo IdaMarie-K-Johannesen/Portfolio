@@ -37,9 +37,11 @@ Firkant f;
 Cirkel c;
 Rektangel r;
 Trekant t;
+int whatShapeToDraw = 0;
 
 void setup() {
   size (600, 400);
+  frameRate(10);
 }
 
 void draw() {
@@ -49,11 +51,32 @@ void draw() {
   r = new Rektangel();
   t = new Trekant();
   // tegner objekterne på canvas
-  f.drawFirkant();
-  c.drawCirkel();
-  r.drawRektangel();
-  t.drawTrekant();
+   // tegner firkanten på canvas
+ 
+  if (whatShapeToDraw == 0) {
+    f.drawFirkant();
+  } 
+  else if (whatShapeToDraw == 1) {
+    c.drawCirkel();
+  }
+  else if (whatShapeToDraw == 2) {
+    t.drawTrekant();
+  }
+  else if (whatShapeToDraw == 3) {
+    r.drawRektangel();
+    whatShapeToDraw=0;
+  }
+  whatShapeToDraw++;
 }
+
+
+ 
+void mousePressed() {
+  background(225);
+}
+
+
+
 
 /*
  opgave 1.

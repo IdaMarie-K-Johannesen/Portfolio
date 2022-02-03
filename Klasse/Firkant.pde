@@ -30,7 +30,7 @@ class Firkant {
 
   // tegn firkant på canvas
   void drawFirkant() {
-    square(x, y, len);
     fill(r, g, b);
+    square(x, y, len);
   }
 }
